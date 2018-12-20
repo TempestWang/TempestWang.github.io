@@ -19,7 +19,7 @@ baidu_js_push: false
 # Sidebar settings侧边栏
 sidebar: true                           # whether or not using Sidebar.
 sidebar-about-description: "Goals determine what you going to be!"
-sidebar-avatar: /img/avatar_p11179162.jpg      # use absolute URL, seeing it's used in both `/` and `/about/`
+sidebar-avatar: /img/apple-touch-icon.png      # use absolute URL, seeing it's used in both `/` and `/about/`
 
 
 # SNS settings社交账号
@@ -74,7 +74,7 @@ gitalk:
 
 # Analytics settings 百度统计track_id
 # Baidu Analytics
-ba_track_id: ced86d2ada092fb3a0d736f793d90120
+# ba_track_id: ced86d2ada092fb3a0d736f793d90120
 
 # Google Analytics
 # ga_track_id: 'UA-90855596-1'            # Format: UA-xxxxxx-xx
@@ -100,13 +100,7 @@ service-worker: true
 # Friends好友链接
 friends: [
     {
-        title: "Fe Blog",
-        href: "https://fedemo.top/"
-    },{
         title: "interview",
         href: "https://fedemo.github.io/interview/"
-    },{
-        title: "Fe Coding",
-        href: "https://coding.net/u/fedemo/project"
     }
 ]
