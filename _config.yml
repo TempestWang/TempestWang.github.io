@@ -2,7 +2,7 @@
 title: TempestWang Blog  #你博客的标题
 SEOTitle: TempestWang的博客 | TempestWang Blog  #显示在浏览器上搜索的时候显示的标题
 header-img: img/page-bg-keyboard.png #显示在首页的背景图片
-email: TempestWang@qq.com
+email: tempestwang@foxmail.com
 description: "Hey，我是TempestWang，一只JAVA程序猿,这是我的利用 GitHub Pages 与 Jekyll 搭建的个人博客。内有搭建博客的详细教程,欢迎大家来玩。" #网站介绍
 keyword: "TempestWang的博客,GitHub,TempestWang,博客,Blog,JAVA" #关键词
 url: "https://TempestWang.top"          # your host, for absolute URL
