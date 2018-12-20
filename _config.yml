@@ -18,7 +18,7 @@ baidu_js_push: false
 
 # Sidebar settings侧边栏
 sidebar: true                           # whether or not using Sidebar.
-sidebar-about-description: "You can't succeed coming to the potluck with only a fork"
+sidebar-about-description: "You can't succeed coming to the potluck with only a fork."
 sidebar-avatar: /img/apple-touch-icon.png      # use absolute URL, seeing it's used in both `/` and `/about/`
 
 
