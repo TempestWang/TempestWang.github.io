@@ -7,11 +7,11 @@ description: "Hey，我是TempestWang，一只JAVA程序猿,这是我的利用 G
 keyword: "TempestWang的博客,GitHub,TempestWang,博客,Blog,JAVA" #关键词
 url: "https://TempestWang.top"          # your host, for absolute URL
 baseurl: ""      # for example, '/blog' if your blog hosted on 'host/blog'
-github_repo: "blog" # you code repository
-author: Fe
+github_repo: "https://github.com/TempestWang/TempestWang.github.io.git" # you code repository
+author: TempestWang
 
 # 是否托管在Coding_Pages
-Coding_Pages: true
+Coding_Pages: false
 
 #  是否开启百度自动推送JS代码
 baidu_js_push: false
