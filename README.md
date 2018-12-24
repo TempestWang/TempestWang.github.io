@@ -3,7 +3,7 @@
 >该博客模板来自<a href="https://github.com/huxpro" target="view_window">Hux</a>修改的<a href="https://startbootstrap.com/template-overviews/clean-blog/" target="view_window">Clean Blog</a>   
 >添加了搜索及Gitalk评论插件以及按时间归档   
 >本教程参考自<a href="https://github.com/qiubaiying" target="view_window">BY</a>    
->最后,<a href="https://TempestWang.top" target="view_window">这是我的博客 TempestWang.top</a>
+>最后,<a href="https://TempestWang.github.io/" target="view_window">这是我的博客 TempestWang</a>
 
 # 从零开始的博客生涯
 
@@ -11,7 +11,7 @@
 
 这个博客是使用github pages和jekyll框架搭建的
 
-在这过程中也踩过不少坑,总算把我的个人博客<a href="https://TempestWang.top/" target="view_window">TempestWang</a>给搭出来了  
+在这过程中也踩过不少坑,总算把我的个人博客<a href="https://TempestWang.github.io/" target="view_window">TempestWang</a>给搭出来了  
 
 然后我也就想着做一个教程出来纪念一下(笑),废话不多说,先上图
 
@@ -29,7 +29,7 @@
 
 我们需要搭建的博客是搭在github上的,那么,这张图就不得不放出来了   
 
-![](https://raw.githubusercontent.com/FeDemo/img_gitalk/master/2017-12-08-blog_re0/3.png)  
+![](https://raw.githubusercontent.com/TempestWang/img_gitalk/master/2017-12-08-blog_re0/3.png)  
 
 对,全球最大的同性交友平台 **github** ,你值得拥有  
 
