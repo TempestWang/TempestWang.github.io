@@ -3,7 +3,7 @@
 >该博客模板来自<a href="https://github.com/huxpro" target="view_window">Hux</a>修改的<a href="https://startbootstrap.com/template-overviews/clean-blog/" target="view_window">Clean Blog</a>   
 >添加了搜索及Gitalk评论插件以及按时间归档   
 >本教程参考自<a href="https://github.com/qiubaiying" target="view_window">BY</a>    
->最后,<a href="https://TempestWang.top" target="view_window">这是我的博客 fedemo.top</a>
+>最后,<a href="https://TempestWang.top" target="view_window">这是我的博客 TempestWang.top</a>
 
 # 从零开始的博客生涯
 
