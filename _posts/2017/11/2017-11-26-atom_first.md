@@ -14,7 +14,7 @@ tags:
 >汉化插件   
 >菜单翻译  
 >使用Atom来编写Markdown   
-
+>转自[Fe blog](https://fedemo.top/2018/07/07/oracle-serve/)
 ## 前言
 
 ### 一些想说的话  
