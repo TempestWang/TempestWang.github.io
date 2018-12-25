@@ -11,6 +11,7 @@ tags:
     - Http
     - Https
 ---
+>转自[Fe blog](https://fedemo.top/2018/07/07/oracle-serve/)  
 >参考:[百度](https://www.baidu.com),[豆豆蛙](https://www.cnblogs.com/wqhwe/p/5407468.html),[CTI论坛](https://zm12.sm-tc.cn/?src=l4uLj8XQ0IiIiNGci5aZkI2KktGckJLQ&from=derive&depth=2&link_type=60&v=1&uid=45e62ef48ddf9ed73f9b1e6f0963a9d4&hid=95f7e320871686ae155299f4ca084a43&restype=1&uc_param_str=dnntnwvepffrgibijbprsvdsdichei&query=http%E5%92%8Chttps%E6%9C%89%E4%BB%80%E4%B9%88%E5%8C%BA%E5%88%AB)
 
 ## 前言
