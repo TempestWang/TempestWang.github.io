@@ -11,6 +11,7 @@ tags:
     - Oracle
     - SQL
 ---
+>转自[Fe blog](https://fedemo.top/2018/07/07/oracle-serve/)  
 >操作字段,`||`,`wm_concat()`函数,`REPLACE()`函数
 
 ## 对表格字段进行合并
