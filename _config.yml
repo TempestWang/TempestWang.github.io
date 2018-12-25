@@ -61,13 +61,13 @@ kramdown:
 
 # 评论系统
 # Gitalk
-gitalk:
-  enable: true    #是否开启Gitalk评论
-  clientID: '6c935d368d2246a59477'    #生成的clientID
-  clientSecret: '13a6122c2bb611673a418eb8d5586981f9c00505'   #同上
-  repo: img_gitalk    #仓库名称
-  owner: TempestWang    #github用户名
-  admin: TempestWang
+#gitalk:
+#  enable: true    #是否开启Gitalk评论
+#  clientID: '6c935d368d2246a59477'    #生成的clientID
+#  clientSecret: '13a6122c2bb611673a418eb8d5586981f9c00505'   #同上
+#  repo: img_gitalk    #仓库名称
+#  owner: TempestWang    #github用户名
+#  admin: TempestWang
 
 
 
