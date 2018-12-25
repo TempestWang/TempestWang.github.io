@@ -1,3 +1,3 @@
 >刚刚创建博客的萌新  
->参考[FeDemo](https://github.com/fedemo/)  
+>参考[FeDemo](https://github.com/FeDemo/fedemo.github.io)  
 
