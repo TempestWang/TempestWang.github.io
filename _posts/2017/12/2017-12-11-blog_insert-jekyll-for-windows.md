@@ -11,6 +11,7 @@ tags:
     - Blog
     - Jekyll
 ---
+>转自[Fe blog](https://fedemo.top/2018/07/07/oracle-serve/)  
 >在本地调试你的博客  
 >官网 [jekyllcn.com](http://jekyllcn.com)
 
