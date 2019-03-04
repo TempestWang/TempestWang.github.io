@@ -11,8 +11,6 @@ tags:
     - redis
 ---
 
->转自[Fe blog](https://fedemo.top/2018/07/07/oracle-serve/)  
-
 ## redis的安装
 
 #### Windows

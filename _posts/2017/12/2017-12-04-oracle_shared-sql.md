@@ -13,7 +13,6 @@ tags:
 >Oracle SQL语句性能优化笔记  
 >共享SQL语句  
 >高性能Ocacle优化
->转自[Fe blog](https://fedemo.top/2018/07/07/oracle-serve/)
 
 ## 共享SQL语句
 ### 概述

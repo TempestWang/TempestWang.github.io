@@ -12,7 +12,6 @@ tags:
 ---
 >参考[百度文库](https://wenku.baidu.com/view/5e07d4b076a20029bd642ded.html)
 
->转自[Fe blog](https://fedemo.top/2018/07/07/oracle-serve/)
 ## 前言  
 
 ## oracle服务

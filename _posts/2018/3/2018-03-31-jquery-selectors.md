@@ -12,7 +12,6 @@ tags:
     - 前端
     - JS
 ---
->转自[Fe blog](https://fedemo.top/2018/07/07/oracle-serve/)  
 >参考:  [w3c](http://www.w3school.com.cn)  , **jquery.api.3.2.1**
 
 ## jQuery 选择器  

@@ -11,8 +11,7 @@ tags:
     - Blog
     - 二维码
     - Java
----
->转自[Fe blog](https://fedemo.top/2018/07/07/oracle-serve/)  
+---  
 >定制自定义二维码   
 >基于zxing的二维码生成笔记  
 >参考:[sanfye](http://blog.csdn.net/sanfye/article/details/45749139),在其基础上添加了在前端显示的扩展   
