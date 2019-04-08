@@ -1,9 +1,9 @@
 ---
 layout:     post
 title:      深入理解前端性能监控
-subtitle:   前端 优化
+subtitle:   前端优化
 date:       2019-04-08
-author:     TNFE 大鹏哥
+author:     TempestWang
 header-img: img/post-bg-coffee.jpeg
 keywords_post:  "深入理解前端性能监控优化"
 catalog: true
@@ -13,7 +13,7 @@ tags:
 >使用performance优化前端<br/>
 >performance功能详解  
 
-引用：[https://juejin.im/post/5caaacc0e51d452b45296487](https://juejin.im/post/5caaacc0e51d452b45296487)
+引用自：[大鹏哥](https://juejin.im/post/5caaacc0e51d452b45296487) 
 ## 深入理解前端性能监控
 
 	在同样的网络环境下，有两个同样能满足你的需求的网站，一个唰的一下就加载出来了，另一个白屏转圈转了半天内容才出来，如果让你选择，你会用哪一个？
@@ -34,19 +34,19 @@ tags:
 
 先来了解一下performance的结构：
 
-![](img/performance.png)
+![](https://raw.githubusercontent.com/TempestWang/TempestWang.github.io/master/_posts/2019/4/img/performance.png)
 
-performance.memory是显示此刻内存占用情况，它是一个动态值，其中： usedJSHeapSize表示：JS 对象（包括V8引擎内部对象）占用的内存数 totalJSHeapSize表示：可使用的内存 jsHeapSizeLimit表示：内存大小限制 通常，usedJSHeapSize不能大于totalJSHeapSize，如果大于，有可能出现了内存泄漏。
+>performance.memory是显示此刻内存占用情况，它是一个动态值，其中： usedJSHeapSize表示：JS 对象（包括V8引擎内部对象）占用的内存数 totalJSHeapSize表示：可使用的内存 jsHeapSizeLimit表示：内存大小限制 通常，usedJSHeapSize不能大于totalJSHeapSize，如果大于，有可能出现了内存泄漏。
 
-performance.navigation显示页面的来源信息，其中： redirectCount表示：如果有重定向的话，页面通过几次重定向跳转而来，默认为0 type表示页面打开的方式， 0 表示 TYPE_NAVIGATENEXT 正常进入的页面（非刷新、非重定向等） 1 表示 TYPE_RELOAD 通过 window.location.reload() 刷新的页面 2 表示 TYPE_BACK_FORWARD 通过浏览器的前进后退按钮进入的页面（历史记录） 255 表示 TYPE_UNDEFINED 非以上方式进入的页面
+>performance.navigation显示页面的来源信息，其中： redirectCount表示：如果有重定向的话，页面通过几次重定向跳转而来，默认为0 type表示页面打开的方式， 0 表示 TYPE_NAVIGATENEXT 正常进入的页面（非刷新、非重定向等） 1 表示 TYPE_RELOAD 通过 window.location.reload() 刷新的页面 2 表示 TYPE_BACK_FORWARD 通过浏览器的前进后退按钮进入的页面（历史记录） 255 表示 TYPE_UNDEFINED 非以上方式进入的页面
 
-performance.onresourcetimingbufferfull 属性是一个在resourcetimingbufferfull事件触发时会被调用的 event handler 。它的值是一个手动设置的回调函数，这个回调函数会在浏览器的资源时间性能缓冲区满时执行。
+>performance.onresourcetimingbufferfull 属性是一个在resourcetimingbufferfull事件触发时会被调用的 event handler 。它的值是一个手动设置的回调函数，这个回调函数会在浏览器的资源时间性能缓冲区满时执行。
 
-performance.timeOrigin是一系列时间点的基准点，精确到万分之一毫秒。
+>performance.timeOrigin是一系列时间点的基准点，精确到万分之一毫秒。
 
-performance.timing是一系列关键时间点，它包含了网络、解析等一系列的时间数据。
+>performance.timing是一系列关键时间点，它包含了网络、解析等一系列的时间数据。
 
-![](img/timing.png)
+![](https://raw.githubusercontent.com/TempestWang/TempestWang.github.io/master/_posts/2019/4/img/timing.png)
 
 下面是对这些时间点进行解释
 
@@ -137,9 +137,9 @@ performance.timing是一系列关键时间点，它包含了网络、解析等�
 
 如何优化？
 
-**重定向优化：**重定向的类型分三种，301（永久重定向），302（临时重定向），304（Not Modified）。304是用来优化缓存，非常有用，而前两种应该尽可能的避免，凡是遇到需要重定向跳转代码的代码，可以把重定向之后的地址直接写到前端的html或JS中，可以减少客户端与服务端的通信过程，节省重定向耗时。
+>**重定向优化：**重定向的类型分三种，301（永久重定向），302（临时重定向），304（Not Modified）。304是用来优化缓存，非常有用，而前两种应该尽可能的避免，凡是遇到需要重定向跳转代码的代码，可以把重定向之后的地址直接写到前端的html或JS中，可以减少客户端与服务端的通信过程，节省重定向耗时。
 
-**DNS优化：**一般来说，在前端优化中与 DNS 有关的有两点： 一个是减少DNS的请求次数，另一个就是进行DNS预获取（Prefetching ） 。典型的一次DNS解析需要耗费 20-120 毫秒（移动端会更慢），减少DNS解析的次数是个很好的优化方式，尽量把各种资源放在一个cdn域名上。DNS Prefetching 是让具有此属性的域名不需要用户点击链接就在后台解析，而域名解析和内容载入是串行的网络操作，所以这个方式能减少用户的等待时间，提升用户体验 。新版的浏览器会对页面中和当前域名（正在浏览网页的域名）不在同一个域的域名进行预获取，并且缓存结果，这就是隐式的 DNS Prefetch。如果想对页面中没有出现的域进行预获取，那么就要使用显示的 DNS Prefetch 了。下图是DNS Prefetch的方法：
+>**DNS优化：**一般来说，在前端优化中与 DNS 有关的有两点： 一个是减少DNS的请求次数，另一个就是进行DNS预获取（Prefetching ） 。典型的一次DNS解析需要耗费 20-120 毫秒（移动端会更慢），减少DNS解析的次数是个很好的优化方式，尽量把各种资源放在一个cdn域名上。DNS Prefetching 是让具有此属性的域名不需要用户点击链接就在后台解析，而域名解析和内容载入是串行的网络操作，所以这个方式能减少用户的等待时间，提升用户体验 。新版的浏览器会对页面中和当前域名（正在浏览网页的域名）不在同一个域的域名进行预获取，并且缓存结果，这就是隐式的 DNS Prefetch。如果想对页面中没有出现的域进行预获取，那么就要使用显示的 DNS Prefetch 了。下图是DNS Prefetch的方法：
 
 	<html>
 	<head>
@@ -150,15 +150,15 @@ performance.timing是一系列关键时间点，它包含了网络、解析等�
 	  <link rel="dns-prefetch" href="//coral.qq.com" />
 	  <link rel="dns-prefetch" href="//pingjs.qq.com"  />
 
-**TCP请求优化：**TCP的优化大都在服务器端，前端能做的就是尽量减少TCP的请求数，也就是减少HTTP的请求数量。http 1.0 默认使用短连接，也是TCP的短连接，也就是客户端和服务端每进行一次http操作，就建立一次连接，任务结束就中断连接。这个过程中有3次TCP请求握手和4次TCP请求释放。减少TCP请求的方式有两种，一种是资源合并，对于页面内的图片、css和js进行合并，减少请求量。另一种使用长链接，使用http1.1，在HTTP的响应头会加上 Connection:keep-alive，当一个网页打开完成之后，连接不会马上关闭，再次访问这个服务时，会继续使用这个长连接。这样就大大减少了TCP的握手次数和释放次数。或者使用Websocket进行通信，全程只需要建立一次TCP链接。
+>**TCP请求优化：**TCP的优化大都在服务器端，前端能做的就是尽量减少TCP的请求数，也就是减少HTTP的请求数量。http 1.0 默认使用短连接，也是TCP的短连接，也就是客户端和服务端每进行一次http操作，就建立一次连接，任务结束就中断连接。这个过程中有3次TCP请求握手和4次TCP请求释放。减少TCP请求的方式有两种，一种是资源合并，对于页面内的图片、css和js进行合并，减少请求量。另一种使用长链接，使用http1.1，在HTTP的响应头会加上 Connection:keep-alive，当一个网页打开完成之后，连接不会马上关闭，再次访问这个服务时，会继续使用这个长连接。这样就大大减少了TCP的握手次数和释放次数。或者使用Websocket进行通信，全程只需要建立一次TCP链接。
 
-**HTTP请求优化：**使用内容分发网络（CDN）和减少请求。使用CDN可以减少网络的请求时延，CDN的域名不要和主站的域名一样，这样会防止访问CDN时还携带主站cookie的问题，对于网络请求，可以使用fetch发送无cookie的请求，减少http包的大小。也可以使用本地缓存策略，尽量减少对服务器数据的重复获取。
+>**HTTP请求优化：**使用内容分发网络（CDN）和减少请求。使用CDN可以减少网络的请求时延，CDN的域名不要和主站的域名一样，这样会防止访问CDN时还携带主站cookie的问题，对于网络请求，可以使用fetch发送无cookie的请求，减少http包的大小。也可以使用本地缓存策略，尽量减少对服务器数据的重复获取。
 
-**渲染优化：**在浏览器端的渲染过程，如大型框架，vue和react，它的模板其实都是在浏览器端进行渲染的，不是直出的html，而是要走框架中相关的框架代码才能去渲染出页面，这个渲染过程对于首屏就有较大的损耗，白屏的时间会有所增加。在必要的情况下可以在服务端进行整个html的渲染，从而将整个html直出到我们的浏览器端，而非在浏览器端进行渲染。
+>**渲染优化：**在浏览器端的渲染过程，如大型框架，vue和react，它的模板其实都是在浏览器端进行渲染的，不是直出的html，而是要走框架中相关的框架代码才能去渲染出页面，这个渲染过程对于首屏就有较大的损耗，白屏的时间会有所增加。在必要的情况下可以在服务端进行整个html的渲染，从而将整个html直出到我们的浏览器端，而非在浏览器端进行渲染。
 
-![](img/2019-4/DNS.png)
+![](https://raw.githubusercontent.com/TempestWang/TempestWang.github.io/master/_posts/2019/4/img/DNS.png)
 
-还有一个问题就是，在默认情况下，JavaScript 执行会“阻止解析器”，当浏览器遇到一个 script 外链标记时，DOM 构建将暂停，会将控制权移交给 JavaScript 运行时，等脚本下载执行完毕，然后再继续构建 DOM。而且内联脚本始终会阻止解析器，除非编写额外代码来推迟它们的执行。我们可以把 script 外链加入到页面底部，也可以使用 defer 或 async 延迟执行。defer 和 async 的区别就是 defer 是有序的，代码的执行按在html中的先后顺序，而 async 是无序的，只要下载完毕就会立即执行。或者使用异步的编程方法，比如settimeout，也可以使用多线webworker，它们不会阻碍 DOM 的渲染。
+>还有一个问题就是，在默认情况下，JavaScript 执行会“阻止解析器”，当浏览器遇到一个 script 外链标记时，DOM 构建将暂停，会将控制权移交给 JavaScript 运行时，等脚本下载执行完毕，然后再继续构建 DOM。而且内联脚本始终会阻止解析器，除非编写额外代码来推迟它们的执行。我们可以把 script 外链加入到页面底部，也可以使用 defer 或 async 延迟执行。defer 和 async 的区别就是 defer 是有序的，代码的执行按在html中的先后顺序，而 async 是无序的，只要下载完毕就会立即执行。或者使用异步的编程方法，比如settimeout，也可以使用多线webworker，它们不会阻碍 DOM 的渲染。
 
 	<script async type="text/javascript" src="app1.js"></script>
 	<script defer type="text/javascript" src="app2.js"></script>
@@ -242,10 +242,13 @@ let t0 = window.performance.now(); doSomething(); let t1 = window.performance.no
 function buffer_full(event) { console.log("WARNING: Resource Timing Buffer is FULL!"); performance.setResourceTimingBufferSize(200); } function init() { // Set a callback if the resource buffer becomes filled performance.onresourcetimingbufferfull = buffer_full; }
 
 使用performance的这些属性和方法，能够准确的记录下我们想要的时间，再加上日志采集等功能的辅助，我们就能很容易的掌握自己网站的各项性能指标了。
+
 ### 兼容性
+
 目前主流浏览器虽然都已支持performance对象，但是并不能支持它上面的全部属性和方法，有些细微的差别。本文主要依据chrome和qq浏览器测试了相关属性和方法，均可使用。
 
 ### 我们做了什么？（划重点）
+
 现在的很多性能监控分析工具都是通过数据上报来实现的，不能及时有效的反馈页面的性能问题，只能在用户使用之后上报（问题出现之后）才能知道。所以基于新闻前端团队基于performance API做了一款实时查看性能的的工具，它并能给出详细的报表，在开发阶段把性能问题给解决掉。
 
 superProfiler**【外部开源流程中】**
@@ -253,15 +256,21 @@ superProfiler**【外部开源流程中】**
 
 它是一款JavaScript性能监控工具库，通过脚本引用，加载展示在页面右侧，无须依赖任何库和脚本，可以实时查看当前页面的FPS、代码执行耗时、内存占用以及当前页面的网络性能，资源占用。
 
-![](img/houtai.jpg)
+![](https://raw.githubusercontent.com/TempestWang/TempestWang.github.io/master/_posts/2019/4/img/houtai.jpg)
 
 还能查看最近的（10次）页面性能的平均数。点击“生成报表”按钮会生成更详细的数据报表概览。
 
-![](img/ziyuan.png)
+![](https://raw.githubusercontent.com/TempestWang/TempestWang.github.io/master/_posts/2019/4/img/ziyuan.png)
 
 ### 小结
+
 Performance API 用来做前端性能监控非常有用，它提供了很多方便测试我们程序性能的接口。比如mark和measure。很多优秀的框架也用到了这个API进行测试。它里面就频繁用到了mark和measure来测试程序性能。所以想要开发高性能的web程序，了解Performace API还是非常重要的。最后通过superProfiler工具可以更快更便捷的查找出性能问题，针对性的击破问题，提高开发效率，提升用户体验。当然这只是前端性能优化的第一步，道阻且长。希望大家提出问题和指出疑问，一起进步。
 
 作者：TNFE 大鹏哥
 团队推广
-最后，腾讯新闻TNFE前端团队为前端开发人员整理出了小程序以及web前端技术领域的最新优质内容，每周更新✨，欢迎star，github地址：github.com/Tnfe/TNFE-W…
+最后，腾讯新闻TNFE前端团队为前端开发人员整理出了小程序以及web前端技术领域的最新优质内容，每周更新✨，欢迎star，[github地址](https://link.juejin.im/?target=https%3A%2F%2Fgithub.com%2FTnfe%2FTNFE-Weekly)
+
+
+
+
+<br>
