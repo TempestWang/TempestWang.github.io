@@ -100,6 +100,8 @@ cookie也可以用于追踪用户行为，例如是否访问过本站点，有�
 ## 四、cookie窃取和session劫持
 本文就cookie的三种用途中session管理的安全问题进行展开。 既然cookie用于维持会话，如果这个cookie被攻击者窃取会发生什么？session被劫持！ 攻击者劫持会话就等于合法登录了你的账户，可以浏览大部分用户资源。\
 
+![](https://raw.githubusercontent.com/TempestWang/TempestWang.github.io/master/_posts/2019/4/img/cookie.jpg)
+
 **最基本的cookie窃取方式：xss漏洞**
 
 攻击一旦站点中存在可利用的xss漏洞，攻击者可直接利用注入的js脚本获取cookie，进而通过异步请求把标识session id的cookie上报给攻击者。
