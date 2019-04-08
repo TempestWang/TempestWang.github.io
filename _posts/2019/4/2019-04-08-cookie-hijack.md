@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      cookie-steal
+title:      cookie-窃取
 subtitle:   https
 date:       2019-04-08
 author:     TempestWang
@@ -10,7 +10,8 @@ catalog: true
 tags:
     - cookie session
 ---
->https原理解析
+>cookie窃取
+>session劫持
 
 引用自：[原文](http://www.2cto.com/Article/201411/355266.html) 
 
