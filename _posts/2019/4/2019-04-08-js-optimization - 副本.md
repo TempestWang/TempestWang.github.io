@@ -1,19 +1,18 @@
 ---
 layout:     post
-title:      深入理解前端性能监控
-subtitle:   前端优化
+title:      https
+subtitle:   https
 date:       2019-04-08
 author:     TempestWang
 header-img: img/2019/2019-4-js.png
-keywords_post:  "深入理解前端性能监控优化"
+keywords_post:  "一个故事讲完https"
 catalog: true
 tags:
-    - 前端优化
+    - https
 ---
->使用performance优化前端<br/>
->performance功能详解  
+>https原理解析
 
-引用自：[大鹏哥](https://juejin.im/post/5caaacc0e51d452b45296487) 
+引用自：[老刘](https://mp.weixin.qq.com/s?__biz=MzAxOTc0NzExNg==&mid=2665513779&idx=1&sn=a1de58690ad4f95111e013254a026ca2&scene=21#wechat_redirect) 
 ## 深入理解前端性能监控
 
 	在同样的网络环境下，有两个同样能满足你的需求的网站，一个唰的一下就加载出来了，另一个白屏转圈转了半天内容才出来，如果让你选择，你会用哪一个？
