@@ -8,7 +8,8 @@ header-img: img/post-bg-hacker.jpg
 keywords_post:  "Cookie窃取和session劫持"
 catalog: true
 tags:
-    - cookie session
+    - cookie
+    - session
 ---
 >cookie窃取
 >session劫持
