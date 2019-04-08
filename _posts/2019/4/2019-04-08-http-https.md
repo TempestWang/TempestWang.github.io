@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      https
+title:      https原理
 subtitle:   https
 date:       2019-04-08
 author:     TempestWang
@@ -59,10 +59,7 @@ Bill 回电： 拉倒你吧你， 我们米国的政体有着强大的纠错性�
 Bill  提议： “要不我们做个数据的加密？ 每次传输之前， 你把消息用一个加密算法加密， 然后发到我这里以后我再解密， 这样别人就无法偷窥了，像这样： ”
 
 
-
-
-
-
+![](https://raw.githubusercontent.com/TempestWang/TempestWang.github.io/master/_posts/2019/4/img/https1.png)
 
 
 
@@ -114,13 +111,13 @@ Bill 和 张大胖的通信无法加密，说话谨慎了不少， 直到有一�
 更有意思的是，用私钥加密的数据，只有对应的公钥才能解密，用公钥加密的数据， 只有对应的私钥才能解密。
 
 
-
+![](https://raw.githubusercontent.com/TempestWang/TempestWang.github.io/master/_posts/2019/4/img/https2.jpg)
 
 
 有了这两个漂亮的特性， 当张大胖给Bill发消息的时候， 就可以先用Bill的公钥去加密（反正Bill的公钥是公开的，地球人都知道）， 等到消息被Bill 收到后， 他就可以用自己的私钥去解密（只有Bill才能解开，私钥是保密的 ）
 
 
-
+![](https://raw.githubusercontent.com/TempestWang/TempestWang.github.io/master/_posts/2019/4/img/https3.jpg)
 
 
 
@@ -180,7 +177,7 @@ Bill 说： “你小子可以啊， 这样以来既解决了密钥的传递问�
 张大胖背后出汗了，是啊，这个中间人解密以后，还可以用Bill的公钥加密，发给Bill ,  Bill和我根本都意识不到， 还以为我们在安全传输呢！
 
 
-
+![](https://raw.githubusercontent.com/TempestWang/TempestWang.github.io/master/_posts/2019/4/img/https4.jpg)
 
 
 
@@ -232,7 +229,7 @@ Bill 说： “你小子可以啊， 这样以来既解决了密钥的传递问�
 
 
 
-
+![](https://raw.githubusercontent.com/TempestWang/TempestWang.github.io/master/_posts/2019/4/img/https5.jpg)
 
 
 
@@ -244,7 +241,7 @@ Bill 说： “你小子可以啊， 这样以来既解决了密钥的传递问�
 
 
 
-
+![](https://raw.githubusercontent.com/TempestWang/TempestWang.github.io/master/_posts/2019/4/img/https6.jpg)
 
 
 
@@ -253,7 +250,7 @@ Bill 说： “你小子可以啊， 这样以来既解决了密钥的传递问�
 这还不算， 还把原始信息和数据签名合并， 形成一个全新的东西，叫做“数字证书”
 
 
-
+![](https://raw.githubusercontent.com/TempestWang/TempestWang.github.io/master/_posts/2019/4/img/https7.jpg)
 
 
 
@@ -270,7 +267,7 @@ Bill 说： “你小子可以啊， 这样以来既解决了密钥的传递问�
 
 
 
-
+![](https://raw.githubusercontent.com/TempestWang/TempestWang.github.io/master/_posts/2019/4/img/https8.jpg)
 
 
 
@@ -302,9 +299,7 @@ Bill 说： “你小子可以啊， 这样以来既解决了密钥的传递问�
 一个简化的（例如下图没有包含Pre-Master Secret）https流程图是这样的， 如果你理解了前面的原理，这张图就变得非常简单：
 
 
-
-
-
+![](https://raw.githubusercontent.com/TempestWang/TempestWang.github.io/master/_posts/2019/4/img/https9.jpg)
 
 
 
